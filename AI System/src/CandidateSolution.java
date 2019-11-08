@@ -31,7 +31,7 @@ public class CandidateSolution {
 				this.policyMix[i] = new Gene(rng.nextInt((int)(Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) + 1) + Policies.allPolicies[i].minValue, true);
 			} else {
 				//else it is a real number policy and set to a random real number in range
-				this.policyMix[i] = new Gene((Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) * CandidateSolution.rng.nextDouble(), true);
+				this.policyMix[i] = new Gene(((Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) * CandidateSolution.rng.nextDouble()) + Policies.allPolicies[i].minValue, true);
 			}
 		}
 	}
