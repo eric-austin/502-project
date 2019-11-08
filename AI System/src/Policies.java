@@ -146,6 +146,32 @@ public class Policies {
 	static public Policy FuelTaxDiesel = new Policy("Additional Fuel Tax Rate by Fuel[petroleum diesel]", real, 0.0, 0.4);
 	
 	//R&D policies
+	static public Policy CCRHeat = new Policy("RnD Building Capital Cost Perc Reduction[heating]", real, 0.0, 0.4);
+	static public Policy CCRCool = new Policy("RnD Building Capital Cost Perc Reduction[cooling and ventilation]", real, 0.0, 0.4);
+	static public Policy CCREnvelope = new Policy("RnD Building Capital Cost Perc Reduction[envelope]", real, 0.0, 0.4);
+	static public Policy CCRLighting = new Policy("RnD Building Capital Cost Perc Reduction[lighting]", real, 0.0, 0.4);
+	static public Policy CCRApp = new Policy("RnD Building Capital Cost Perc Reduction[appliances]", real, 0.0, 0.4);
+	static public Policy CCROther = new Policy("RnD Building Capital Cost Perc Reduction[other component]", real, 0.0, 0.4);
+	static public Policy CCRCCS = new Policy("RnD CCS Capital Cost Perc Reduction", real, 0.0, 0.4);
+	static public Policy CCRCoal = new Policy("RnD Electricity Capital Cost Perc Reduction[hard coal es]", real, 0.0, 0.4);
+	static public Policy CCRNatGas = new Policy("RnD Electricity Capital Cost Perc Reduction[natural gas nonpeaker es]", real, 0.0, 0.4);
+	static public Policy CCRNuclear = new Policy("RnD Electricity Capital Cost Perc Reduction[nuclear es]", real, 0.0, 0.4);
+	static public Policy CCRHydro = new Policy("RnD Electricity Capital Cost Perc Reduction[hydro es]", real, 0.0, 0.4);
+	static public Policy CCROnWind = new Policy("RnD Electricity Capital Cost Perc Reduction[onshore wind es]", real, 0.0, 0.4);
+	static public Policy CCRSolarPV = new Policy("RnD Electricity Capital Cost Perc Reduction[solar pv es]", real, 0.0, 0.4);
+	static public Policy CCRSolarTherm = new Policy("RnD Electricity Capital Cost Perc Reduction[solar thermal es]", real, 0.0, 0.4);
+	static public Policy CCRBiomass = new Policy("RnD Electricity Capital Cost Perc Reduction[biomass es]", real, 0.0, 0.4);
+	static public Policy CCRNatGasPeak = new Policy("RnD Electricity Capital Cost Perc Reduction[natural gas peaker es]", real, 0.0, 0.4);
+	static public Policy CCROffWind = new Policy("RnD Electricity Capital Cost Perc Reduction[offshore wind es]", real, 0.0, 0.4);
+	static public Policy CCRCement = new Policy("RnD Industry Capital Cost Perc Reduction[cement and other carbonates]", real, 0.0, 0.4);
+	static public Policy CCRNatGasPetr = new Policy("RnD Industry Capital Cost Perc Reduction[natural gas and petroleum systems]", real, 0.0, 0.4);
+	static public Policy CCRIronSteel = new Policy("RnD Industry Capital Cost Perc Reduction[iron and steel]", real, 0.0, 0.4);
+	static public Policy CCRChem = new Policy("RnD Industry Capital Cost Perc Reduction[chemicals]", real, 0.0, 0.4);
+	static public Policy CCRMining = new Policy("RnD Industry Capital Cost Perc Reduction[mining]", real, 0.0, 0.4);
+	static public Policy CCRWaste = new Policy("RnD Industry Capital Cost Perc Reduction[waste management]", real, 0.0, 0.4);
+	static public Policy CCRAg = new Policy("RnD Industry Capital Cost Perc Reduction[agriculture]", real, 0.0, 0.4);
+	static public Policy CCROtherInd = new Policy("RnD Industry Capital Cost Perc Reduction[other industries]", real, 0.0, 0.4);
+	
 	
 	//vector of all policies to be referenced by candidate solutions
 	static public Policy[] allPolicies = {PollutionLDVs, PollutionHDVs, PollutionAircraft, PollutionRail, PollutionShips, PollutionMtrbks, EVPerks, 
@@ -162,5 +188,7 @@ public class Policies {
 			EfficiencyMining, EfficiencyWaste, EfficiencyAg, EfficiencyOther, LimitOilsands, CoalToNatGas, NatGasToElec, MethaneCapt, MethaneDestr,
 			ReduceFGas, WorkerTraining, AnReForest, DeForest, ForestSetAsides, CroplandMgmt, ForestMgmt, LivestockMeasures, CarbonCapture, CTaxTransport,
 			CTaxElectr, CTaxResidential, CTaxCommercial, CTaxIndustry, EndSubsCoal, EndSubsNatGas, EndSubsGasoline, EndSubsDiesel, EndSubsJetFuel,
-			FuelTaxElectr, FuelTaxCoal, FuelTaxNatGas, FuelTaxGasoline, FuelTaxDiesel};
+			FuelTaxElectr, FuelTaxCoal, FuelTaxNatGas, FuelTaxGasoline, FuelTaxDiesel, CCRHeat, CCRCool, CCREnvelope, CCRLighting, CCRApp, CCROther, CCRCCS,
+			CCRCoal, CCRNatGas, CCRNuclear, CCRHydro, CCROnWind, CCRSolarPV, CCRSolarTherm, CCRBiomass, CCRNatGasPeak, CCROffWind, CCRCement, CCRNatGasPetr,
+			CCRIronSteel, CCRChem, CCRMining, CCRWaste, CCRAg, CCROtherInd};
 }
