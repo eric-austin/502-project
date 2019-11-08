@@ -171,7 +171,12 @@ public class Policies {
 	static public Policy CCRWaste = new Policy("RnD Industry Capital Cost Perc Reduction[waste management]", real, 0.0, 0.4);
 	static public Policy CCRAg = new Policy("RnD Industry Capital Cost Perc Reduction[agriculture]", real, 0.0, 0.4);
 	static public Policy CCROtherInd = new Policy("RnD Industry Capital Cost Perc Reduction[other industries]", real, 0.0, 0.4);
-	
+	static public Policy CCRVBattery = new Policy("RnD Transportation Capital Cost Perc Reduction[battery electric vehicle]", real, 0.0, 0.4);
+	static public Policy CCRVNatGas = new Policy("RnD Transportation Capital Cost Perc Reduction[natural gas vehicle]", real, 0.0, 0.4);
+	static public Policy CCRVGasoline = new Policy("RnD Transportation Capital Cost Perc Reduction[gasoline vehicle]", real, 0.0, 0.4);
+	static public Policy CCRVDiesel = new Policy("RnD Transportation Capital Cost Perc Reduction[diesel vehicle]", real, 0.0, 0.4);
+	static public Policy CCRVHybrid = new Policy("RnD Transportation Capital Cost Perc Reduction[plugin hybrid vehicle]", real, 0.0, 0.4);
+	static public Policy CCRVNonRoad = new Policy("RnD Transportation Capital Cost Perc Reduction[nonroad vehicle]", real, 0.0, 0.4);
 	
 	//vector of all policies to be referenced by candidate solutions
 	static public Policy[] allPolicies = {PollutionLDVs, PollutionHDVs, PollutionAircraft, PollutionRail, PollutionShips, PollutionMtrbks, EVPerks, 
@@ -190,5 +195,5 @@ public class Policies {
 			CTaxElectr, CTaxResidential, CTaxCommercial, CTaxIndustry, EndSubsCoal, EndSubsNatGas, EndSubsGasoline, EndSubsDiesel, EndSubsJetFuel,
 			FuelTaxElectr, FuelTaxCoal, FuelTaxNatGas, FuelTaxGasoline, FuelTaxDiesel, CCRHeat, CCRCool, CCREnvelope, CCRLighting, CCRApp, CCROther, CCRCCS,
 			CCRCoal, CCRNatGas, CCRNuclear, CCRHydro, CCROnWind, CCRSolarPV, CCRSolarTherm, CCRBiomass, CCRNatGasPeak, CCROffWind, CCRCement, CCRNatGasPetr,
-			CCRIronSteel, CCRChem, CCRMining, CCRWaste, CCRAg, CCROtherInd};
+			CCRIronSteel, CCRChem, CCRMining, CCRWaste, CCRAg, CCROtherInd, CCRVBattery, CCRVNatGas, CCRVGasoline, CCRVDiesel, CCRVHybrid, CCRVNonRoad};
 }
