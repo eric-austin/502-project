@@ -177,6 +177,18 @@ public class Policies {
 	static public Policy CCRVDiesel = new Policy("RnD Transportation Capital Cost Perc Reduction[diesel vehicle]", real, 0.0, 0.4);
 	static public Policy CCRVHybrid = new Policy("RnD Transportation Capital Cost Perc Reduction[plugin hybrid vehicle]", real, 0.0, 0.4);
 	static public Policy CCRVNonRoad = new Policy("RnD Transportation Capital Cost Perc Reduction[nonroad vehicle]", real, 0.0, 0.4);
+	static public Policy FuelUseHeat = new Policy ("RnD Building Fuel Use Perc Reduction[heating]", real, 0.0, 0.4);
+	static public Policy FuelUseCool = new Policy("RnD Building Fuel Use Perc Reduction[cooling and ventilation]", real, 0.0, 0.4);
+	static public Policy FuelUseLight = new Policy("RnD Building Fuel Use Perc Reduction[lighting]", real, 0.0, 0.4);
+	static public Policy FuelUseApp = new Policy("RnD Building Fuel Use Perc Reduction[appliances]", real, 0.0, 0.4);
+	static public Policy FuelUseOther = new Policy("RnD Building Fuel Use Perc Reduction[other component]", real, 0.0, 0.4);
+	static public Policy FuelUseCCS = new Policy("RnD CCS Fuel Use Perc Reduction", real, 0.0, 0.4);
+	static public Policy FuelUseCoal = new Policy("RnD Electricity Fuel Use Perc Reduction[hard coal es]", real, 0.0, 0.4);
+	static public Policy FuelUseNatGas = new Policy("RnD Electricity Fuel Use Perc Reduction[natural gas nonpeaker es]", real, 0.0, 0.4);
+	static public Policy FuelUseNuclear = new Policy("RnD Electricity Fuel Use Perc Reduction[nuclear es]", real, 0.0, 0.4);
+	static public Policy FuelUseBio = new Policy("RnD Electricity Fuel Use Perc Reduction[biomass es]", real, 0.0, 0.4);
+	static public Policy FuelUseNatGasP = new Policy("RnD Electricity Fuel Use Perc Reduction[natural gas peaker es]", real, 0.0, 0.4);
+	
 	
 	//vector of all policies to be referenced by candidate solutions
 	static public Policy[] allPolicies = {PollutionLDVs, PollutionHDVs, PollutionAircraft, PollutionRail, PollutionShips, PollutionMtrbks, EVPerks, 
@@ -195,5 +207,6 @@ public class Policies {
 			CTaxElectr, CTaxResidential, CTaxCommercial, CTaxIndustry, EndSubsCoal, EndSubsNatGas, EndSubsGasoline, EndSubsDiesel, EndSubsJetFuel,
 			FuelTaxElectr, FuelTaxCoal, FuelTaxNatGas, FuelTaxGasoline, FuelTaxDiesel, CCRHeat, CCRCool, CCREnvelope, CCRLighting, CCRApp, CCROther, CCRCCS,
 			CCRCoal, CCRNatGas, CCRNuclear, CCRHydro, CCROnWind, CCRSolarPV, CCRSolarTherm, CCRBiomass, CCRNatGasPeak, CCROffWind, CCRCement, CCRNatGasPetr,
-			CCRIronSteel, CCRChem, CCRMining, CCRWaste, CCRAg, CCROtherInd, CCRVBattery, CCRVNatGas, CCRVGasoline, CCRVDiesel, CCRVHybrid, CCRVNonRoad};
+			CCRIronSteel, CCRChem, CCRMining, CCRWaste, CCRAg, CCROtherInd, CCRVBattery, CCRVNatGas, CCRVGasoline, CCRVDiesel, CCRVHybrid, CCRVNonRoad,
+			FuelUseHeat, FuelUseCool, FuelUseLight, FuelUseApp, FuelUseOther, FuelUseCCS, FuelUseCoal, FuelUseNatGas, FuelUseNuclear, FuelUseBio, FuelUseNatGasP};
 }
