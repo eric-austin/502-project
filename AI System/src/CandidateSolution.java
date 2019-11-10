@@ -9,7 +9,7 @@ import java.util.Random;
 public class CandidateSolution {
 	//instance variables
 	static public Random rng = new Random();
-	public Gene[] policyMix = new Gene[Policies.allPolicies.length];
+	public double[] policyMix = new double[Policies.allPolicies.length];
 	public double fitness = 0.0;
 	
 	//constructors
@@ -22,16 +22,16 @@ public class CandidateSolution {
 			//if this policy is a boolean, randomly set to on (1.0) or off (0.0)
 			if (Policies.allPolicies[i].dataType == Policies.bool) {
 				if (CandidateSolution.rng.nextBoolean()) {
-					this.policyMix[i] = new Gene(1.0, true);
+					this.policyMix[i] = 1.0;
 				} else {
-					this.policyMix[i] = new Gene(0.0, true);
+					this.policyMix[i] = 0.0;
 				}
 			} else if (Policies.allPolicies[i].dataType == Policies.natural) {
 				//if it is a natural number policy set to a random natural number in range
-				this.policyMix[i] = new Gene(rng.nextInt((int)(Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) + 1) + Policies.allPolicies[i].minValue, true);
+				this.policyMix[i] = rng.nextInt((int)(Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) + 1) + Policies.allPolicies[i].minValue;
 			} else {
 				//else it is a real number policy and set to a random real number in range
-				this.policyMix[i] = new Gene(((Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) * CandidateSolution.rng.nextDouble()) + Policies.allPolicies[i].minValue, true);
+				this.policyMix[i] = ((Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) * CandidateSolution.rng.nextDouble()) + Policies.allPolicies[i].minValue;
 			}
 		}
 	}
@@ -43,7 +43,7 @@ public class CandidateSolution {
 	public void printCandidateSolution() {
 		System.out.println("Quality: " + this.fitness);
 		for (int i = 0; i < Policies.allPolicies.length; i++) {
-			System.out.println(Policies.allPolicies[i].name + " = " + this.policyMix[i].policyValue);
+			System.out.println(Policies.allPolicies[i].name + " = " + this.policyMix[i]);
 		}
 	}
 }

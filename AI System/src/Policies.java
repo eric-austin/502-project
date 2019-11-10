@@ -145,7 +145,7 @@ public class Policies {
 	static public Policy FuelTaxGasoline = new Policy("Additional Fuel Tax Rate by Fuel[petroleum gasoline]", real, 0.0, 0.4);
 	static public Policy FuelTaxDiesel = new Policy("Additional Fuel Tax Rate by Fuel[petroleum diesel]", real, 0.0, 0.4);
 	
-	//R&D policies
+	//R&D policies (56)
 	static public Policy CCRHeat = new Policy("RnD Building Capital Cost Perc Reduction[heating]", real, 0.0, 0.4);
 	static public Policy CCRCool = new Policy("RnD Building Capital Cost Perc Reduction[cooling and ventilation]", real, 0.0, 0.4);
 	static public Policy CCREnvelope = new Policy("RnD Building Capital Cost Perc Reduction[envelope]", real, 0.0, 0.4);
@@ -188,7 +188,20 @@ public class Policies {
 	static public Policy FuelUseNuclear = new Policy("RnD Electricity Fuel Use Perc Reduction[nuclear es]", real, 0.0, 0.4);
 	static public Policy FuelUseBio = new Policy("RnD Electricity Fuel Use Perc Reduction[biomass es]", real, 0.0, 0.4);
 	static public Policy FuelUseNatGasP = new Policy("RnD Electricity Fuel Use Perc Reduction[natural gas peaker es]", real, 0.0, 0.4);
-	
+	static public Policy FuelCement = new Policy("RnD Industry Fuel Use Perc Reduction[cement and other carbonates]", real, 0.0, 0.4);
+	static public Policy FuelNatGasPet = new Policy("RnD Industry Fuel Use Perc Reduction[natural gas and petroleum systems]", real, 0.0, 0.4);
+	static public Policy FuelIronSteel = new Policy("RnD Industry Fuel Use Perc Reduction[iron and steel]", real, 0.0, 0.4);
+	static public Policy FuelChemicals = new Policy("RnD Industry Fuel Use Perc Reduction[chemicals]", real, 0.0, 0.4);
+	static public Policy FuelMining = new Policy("RnD Industry Fuel Use Perc Reduction[mining]", real, 0.0, 0.4);
+	static public Policy FuelWaste = new Policy("RnD Industry Fuel Use Perc Reduction[waste management]", real, 0.0, 0.4);
+	static public Policy FuelAg = new Policy("RnD Industry Fuel Use Perc Reduction[agriculture]", real, 0.0, 0.4);
+	static public Policy FuelOtherInd = new Policy("RnD Industry Fuel Use Perc Reduction[other industries]", real, 0.0, 0.4);
+	static public Policy FuelElectricV = new Policy("RnD Transportation Fuel Use Perc Reduction[battery electric vehicle]", real, 0.0, 0.4);
+	static public Policy FuelNatGasV = new Policy("RnD Transportation Fuel Use Perc Reduction[natural gas vehicle]", real, 0.0, 0.4);
+	static public Policy FuelGasV = new Policy("RnD Transportation Fuel Use Perc Reduction[gasoline vehicle]", real, 0.0, 0.4);
+	static public Policy FuelDieselV = new Policy("RnD Transportation Fuel Use Perc Reduction[diesel vehicle]", real, 0.0, 0.4);
+	static public Policy FuelHybridV = new Policy("RnD Transportation Fuel Use Perc Reduction[plugin hybrid vehicle]", real, 0.0, 0.4);
+	static public Policy FuelNonRoadV = new Policy("RnD Transportation Fuel Use Perc Reduction[nonroad vehicle]", real, 0.0, 0.4);
 	
 	//vector of all policies to be referenced by candidate solutions
 	static public Policy[] allPolicies = {PollutionLDVs, PollutionHDVs, PollutionAircraft, PollutionRail, PollutionShips, PollutionMtrbks, EVPerks, 
@@ -208,5 +221,7 @@ public class Policies {
 			FuelTaxElectr, FuelTaxCoal, FuelTaxNatGas, FuelTaxGasoline, FuelTaxDiesel, CCRHeat, CCRCool, CCREnvelope, CCRLighting, CCRApp, CCROther, CCRCCS,
 			CCRCoal, CCRNatGas, CCRNuclear, CCRHydro, CCROnWind, CCRSolarPV, CCRSolarTherm, CCRBiomass, CCRNatGasPeak, CCROffWind, CCRCement, CCRNatGasPetr,
 			CCRIronSteel, CCRChem, CCRMining, CCRWaste, CCRAg, CCROtherInd, CCRVBattery, CCRVNatGas, CCRVGasoline, CCRVDiesel, CCRVHybrid, CCRVNonRoad,
-			FuelUseHeat, FuelUseCool, FuelUseLight, FuelUseApp, FuelUseOther, FuelUseCCS, FuelUseCoal, FuelUseNatGas, FuelUseNuclear, FuelUseBio, FuelUseNatGasP};
+			FuelUseHeat, FuelUseCool, FuelUseLight, FuelUseApp, FuelUseOther, FuelUseCCS, FuelUseCoal, FuelUseNatGas, FuelUseNuclear, FuelUseBio, FuelUseNatGasP,
+			FuelCement, FuelNatGasPet, FuelIronSteel, FuelChemicals, FuelMining, FuelWaste, FuelAg, FuelOtherInd, FuelElectricV, FuelNatGasV, FuelGasV,
+			FuelDieselV, FuelHybridV, FuelNonRoadV};
 }

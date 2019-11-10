@@ -8,6 +8,7 @@ public class Policy {
 	public int dataType;
 	public double minValue;
 	public double maxValue;
+	public boolean isFixed = false;
 	
 	//constructor
 	public Policy(String n, int dt, double min, double max) {
@@ -15,5 +16,10 @@ public class Policy {
 		this.dataType = dt;
 		this.minValue = min;
 		this.maxValue = max;
+	}
+	
+	//methods 
+	public void setIsFixed(boolean bool) {
+		this.isFixed = bool;
 	}
 }
