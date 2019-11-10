@@ -8,7 +8,6 @@ import java.util.Random;
 
 public class CandidateSolution {
 	//instance variables
-	static public Random rng = new Random();
 	public double[] policyMix = new double[Policies.allPolicies.length];
 	public double fitness = 0.0;
 	
@@ -21,17 +20,17 @@ public class CandidateSolution {
 		for (int i = 0; i < Policies.allPolicies.length; i++) {
 			//if this policy is a boolean, randomly set to on (1.0) or off (0.0)
 			if (Policies.allPolicies[i].dataType == Policies.bool) {
-				if (CandidateSolution.rng.nextBoolean()) {
+				if (Population.rng.nextBoolean()) {
 					this.policyMix[i] = 1.0;
 				} else {
 					this.policyMix[i] = 0.0;
 				}
 			} else if (Policies.allPolicies[i].dataType == Policies.natural) {
 				//if it is a natural number policy set to a random natural number in range
-				this.policyMix[i] = rng.nextInt((int)(Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) + 1) + Policies.allPolicies[i].minValue;
+				this.policyMix[i] = Population.rng.nextInt((int)(Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) + 1) + Policies.allPolicies[i].minValue;
 			} else {
 				//else it is a real number policy and set to a random real number in range
-				this.policyMix[i] = ((Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) * CandidateSolution.rng.nextDouble()) + Policies.allPolicies[i].minValue;
+				this.policyMix[i] = ((Policies.allPolicies[i].maxValue - Policies.allPolicies[i].minValue) * Population.rng.nextDouble()) + Policies.allPolicies[i].minValue;
 			}
 		}
 	}

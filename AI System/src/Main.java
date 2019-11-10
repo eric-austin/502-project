@@ -3,8 +3,10 @@
 public class Main {
 
 	public static void main(String[] args) {
-		CandidateSolution test = new CandidateSolution();
-		test.printCandidateSolution();
-		//System.out.println(Policies.allPolicies.length);
+		Population test = new Population();
+		for(CandidateSolution c : test.candidates) {
+			c.printCandidateSolution();
+			System.out.println("\n\n");
+		}
 	}
 }
