@@ -1,4 +1,7 @@
-import java.util.Random;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintStream;
 
 /**
  * Class representing a candidate solution to the optimization problem
@@ -36,6 +39,42 @@ public class CandidateSolution {
 	}
 	
 	//methods
+	/**
+	 * creates a cmd file for Vensim DSS to run a simulation using the policy settings of the 
+	 * CandidateSolution
+	 */
+	public void writeCommandFile() {
+		try {
+			//create a buffered writer to write command file
+			BufferedWriter outputStream = new BufferedWriter(new FileWriter("..\\eps-1.4.2-alberta\\commandscript.cmd"));
+			//set up simulation
+			String line = "SPECIAL>NOINTERACTION\n";
+			outputStream.write(line);
+			line = "SPECIAL>LOADMODEL|EPS.mdl\n";
+			outputStream.write(line);
+			line = "SIMULATE>RUNNAME|CurrentRun\n";
+			outputStream.write(line);
+			//iterate through all the policies and write values for those that aren't fixed off
+			for (int i = 0; i < Policies.allPolicies.length; i++) {
+				if (!Policies.allPolicies[i].isFixed) {
+					line = "SIMULATE>SETVAL|" + Policies.allPolicies[i].name + "=" + this.policyMix[i] + "\n";
+					outputStream.write(line);
+				}
+			}
+			//run simulation
+			line = "MENU>RUN|O\n";
+			outputStream.write(line);
+			line = "MENU>VDF2CSV|CurrentRun.vdf|RunResults.csv|OutputVarsToExport.lst\n";
+			outputStream.write(line);
+			line = "MENU>EXIT";
+			outputStream.write(line);
+			outputStream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+
 	/**
 	 * Print a candidate solution in a readable way
 	 */

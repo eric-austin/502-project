@@ -7,7 +7,7 @@ import java.util.Random;
  */
 public class Population {
 	//instance variables
-	private int popSize = 3;
+	private int popSize = 1;
 	static public Random rng = new Random();
 	public CandidateSolution[] candidates = new CandidateSolution[popSize];
 	
@@ -15,6 +15,7 @@ public class Population {
 	public Population() {
 		for(int i = 0; i < popSize; i++) {
 			this.candidates[i] = new CandidateSolution();
+			this.candidates[i].writeCommandFile();
 		}
 	}
 }

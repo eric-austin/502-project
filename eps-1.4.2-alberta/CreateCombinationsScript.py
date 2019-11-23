@@ -59,7 +59,7 @@ Settings = 3
 # and a policy with a setting of zero produce identical results.
 
 # Transportation Sector Policies
-Feebate = (False,"LDVs Feebate Rate","Feebate",[0,1])
+Feebate = (True,"LDVs Feebate Rate","Feebate",[0,1])
 FuelEconLDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[gasoline vehicle,LDVs]","FuelEconLDVs",[0,1])
 FuelEconHDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[diesel vehicle,HDVs]","FuelEconHDVs",[0,.66])
 FuelEconAircraft = (False,"Percentage Additional Improvement of Fuel Economy Std[nonroad vehicle,aircraft]","FuelEconAircraft",[0,.54])
@@ -92,7 +92,7 @@ BldgStdsComEnvelope = (False,"Reduction in E Use Allowed by Component Eff Std[en
 BldgStdsComLighting = (False,"Reduction in E Use Allowed by Component Eff Std[lighting,commercial]","BldgStdsComLighting",[0,.40])
 BldgStdsComAppliances = (False,"Reduction in E Use Allowed by Component Eff Std[appliances,commercial]","BldgStdsComAppliances",[0,.38])
 BldgStdsComOther = (False,"Reduction in E Use Allowed by Component Eff Std[other component,commercial]","BldgStdsComOther",[0,.11])
-ImprovedLabeling = (False,"Boolean Improved Device Labeling","ImprovedLabeling",[0,1])
+ImprovedLabeling = (True,"Boolean Improved Device Labeling","ImprovedLabeling",[0,1])
 ContractorEdu = (False,"Boolean Improved Contractor Edu and Training","ContractorEdu",[0,1])
 ElecCpntUrbRes = (False,"Percent New Nonelec Component Sales Shifted to Elec[urban residential]","ElecCpntUrbRes",[0,1])
 ElecCpntRurRes = (False,"Percent New Nonelec Component Sales Shifted to Elec[rural residential]","ElecCpntRurRes",[0,1])
@@ -163,7 +163,7 @@ ConvertNonCHPHeat = (False,"Fraction of Non CHP Heat Production Converted to CHP
 HeatSwitchFromCoal = (False,"Fraction of District Heat Hard Coal Use Converted to Other Fuels","HeatSwitchFromCoal",[0,1])
 
 # Cross-Sector Policies
-CarbonTaxTrans = (False,"Carbon Tax[transportation sector]","CarbonTaxTrans",[0,300])
+CarbonTaxTrans = (True,"Carbon Tax[transportation sector]","CarbonTaxTrans",[0,300])
 CarbonTaxElec = (False,"Carbon Tax[electricity sector]","CarbonTaxElec",[0,300])
 CarbonTaxResBldg = (False,"Carbon Tax[residential buildings sector]","CarbonTaxResBldg",[0,300])
 CarbonTaxComBldg = (False,"Carbon Tax[commercial buildings sector]","CarbonTaxComBldg",[0,300])
