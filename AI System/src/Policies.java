@@ -4,9 +4,9 @@
  */
 public class Policies {
 	//instance variables
-	static public int bool = 0;
-	static public int natural = 1;
-	static public int real = 2;
+	static protected int bool = 0;
+	static protected int natural = 1;
+	static protected int real = 2;
 	
 	
 	//transportation sector policies (24)
@@ -111,7 +111,7 @@ public class Policies {
 	static public Policy EfficiencyWaste = new Policy("Percentage Improvement in Eqpt Efficiency Standards above BAU[waste management]", real, 0.0, 0.33);
 	static public Policy EfficiencyAg = new Policy("Percentage Improvement in Eqpt Efficiency Standards above BAU[agriculture]", real, 0.0, 0.33);
 	static public Policy EfficiencyOther = new Policy("Percentage Improvement in Eqpt Efficiency Standards above BAU[other industries]", real, 0.0, 0.33);
-	static public Policy LimitOilsands = new Policy("Fraction of Installation and System Integration Issues Remedied", bool, 0.0, 1.0);
+	static public Policy LimitOilsands = new Policy("Fraction of Installation and System Integration Issues Remedied", real, 0.0, 1.0);
 	static public Policy CoalToNatGas = new Policy("Fraction of Hard Coal Use Converted to Other Fuels", real, 0.0, 1.0);
 	static public Policy NatGasToElec = new Policy("Fraction of Natural Gas Use Converted to Other Fuels", real, 0.0, 0.5);
 	static public Policy MethaneCapt = new Policy("Fraction of Methane Capture Opportunities Achieved", real, 0.0, 1.0);
