@@ -4,11 +4,11 @@
  */
 public class Policy {
 	//instance variables
-	public String name;
-	public int dataType;
-	public double minValue;
-	public double maxValue;
-	public boolean isFixed = false;
+	protected String name;
+	protected int dataType;
+	protected double minValue;
+	protected double maxValue;
+	protected boolean isFixed = false;
 	
 	//constructor
 	public Policy(String n, int dt, double min, double max) {
