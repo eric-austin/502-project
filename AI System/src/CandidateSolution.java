@@ -40,6 +40,14 @@ public class CandidateSolution {
 		}
 	}
 	
+	/**
+	 * Create a new CandidateSolution with all values copied from existing CandidateSolution
+	 */
+	public CandidateSolution(CandidateSolution parent) {
+		System.arraycopy(parent.policyMix, 0, this.policyMix, 0, this.policyMix.length);
+		this.fitness = parent.fitness;
+	}
+	
 	//methods
 	/**
 	 * creates a cmd file for Vensim DSS to run a simulation using the policy settings of the 
