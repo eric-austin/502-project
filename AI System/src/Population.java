@@ -11,9 +11,6 @@ import java.util.TreeMap;
  */
 public class Population {
 	//instance variables
-	protected int initPopSize = 20;
-	protected int currentPopSize = initPopSize;
-	protected int maxPopSize = 40;
 	protected double totalFitness = 0.0;
 	protected CandidateSolution bestSolution = null;
 	static protected Random rng = new Random();
@@ -27,7 +24,7 @@ public class Population {
 	public Population() throws InterruptedException {
 		this.buildIndexLists();
 		CandidateSolution currentCandidate = null;
-		for(int i = 0; i < initPopSize; i++) {
+		for(int i = 0; i < Main.initPopSize; i++) {
 			currentCandidate = new CandidateSolution();
 			currentCandidate.writeCommandFile();
 			this.runVensim();
@@ -105,6 +102,7 @@ public class Population {
 		newC.evaluateFitness();
 		this.updateBest(newC);
 		this.addCandidate(newC);
+		Main.currentPopSize++;
 	}
 	
 	/**
@@ -156,6 +154,7 @@ public class Population {
 		newC.evaluateFitness();
 		this.updateBest(newC);
 		this.addCandidate(newC);
+		Main.currentPopSize++;
 	}
 	
 	/**
@@ -208,6 +207,7 @@ public class Population {
 		newC.evaluateFitness();
 		this.updateBest(newC);
 		this.addCandidate(newC);
+		Main.currentPopSize++;
 	}
 	
 	/**
@@ -259,6 +259,7 @@ public class Population {
 		newC.evaluateFitness();
 		this.updateBest(newC);
 		this.addCandidate(newC);
+		Main.currentPopSize++;
 	}
 	
 	/**
@@ -313,6 +314,7 @@ public class Population {
 		newC.evaluateFitness();
 		this.updateBest(newC);
 		this.addCandidate(newC);
+		Main.currentPopSize++;
 	}
 	
 	/**
@@ -343,6 +345,7 @@ public class Population {
 		candidateNew.evaluateFitness();
 		this.updateBest(candidateNew);
 		this.addCandidate(candidateNew);
+		Main.currentPopSize++;
 	}
 	
 	/**
