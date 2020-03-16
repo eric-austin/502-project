@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.NavigableMap;
+import java.util.PriorityQueue;
 import java.util.Random;
 import java.util.TreeMap;
 
@@ -326,7 +328,7 @@ public class Population {
 		//new candidate solution to be create by crossover
 		CandidateSolution candidateNew = new CandidateSolution();
 		//select a random index to split the vector
-		int i = Population.rng.nextInt(Policies.allPolicies.length);
+		int i = Population.rng.nextInt(Policies.allPolicies.length - 1);
 		//iterate through all policies and assign values from first target to indexes below breakpoint, second target above breakpoint
 		for (int j = 0; j <= i; j++) {
 			candidateNew.policyMix[j] = candidateA.policyMix[j];
@@ -383,7 +385,41 @@ public class Population {
 	 * cull the weakest members of the current candidate population to reduce current pop to init pop size
 	 */
 	public void cull() {
-		
+		//create max heap for candidates by quality
+		Comparator<CandidateSolution> fitnessComp = new Comparator<CandidateSolution>() {
+			@Override
+			public int compare(CandidateSolution c1, CandidateSolution c2) {
+				//reverse of min since we want max
+				if (c1.fitness - c2.fitness < 0) {
+					return 1;
+				} else if (c1.fitness - c2.fitness > 0) {
+					return -1;
+				} else {
+					return 0;
+				}
+			}
+		};
+		PriorityQueue<CandidateSolution> candidatesByFitness = new PriorityQueue<CandidateSolution>(this.maxPop + 1, fitnessComp);
+		//add all current candidates to max heap
+		for (int i = 0; i < this.candidates.size(); i++) {
+			candidatesByFitness.add(this.candidates.get(i));
+		}
+		//clear candidates list
+		this.candidates.clear();
+		//clear selection wheel
+		this.selectionWheel.clear();
+		//reset population
+		this.currentPop = 0;
+		//reset total fitness
+		this.totalFitness = 0.0;
+		//only want the initPop fittest candidates to survive
+		for (int j = 0; j < this.initPop; j++) {
+			this.addCandidate(candidatesByFitness.poll());
+		}
+		//need to add the discarded candidates to inferior list
+		while (candidatesByFitness.peek() != null) {
+			this.inferiorCandidates.add(candidatesByFitness.poll());
+		}
 	}
 	
 	
@@ -394,14 +430,15 @@ public class Population {
 		//build lists of indexes
 		int count = 0;
 		int index = 0;
+		
 		for (Policy p : Policies.allPolicies) {
-			if (p.dataType == Policies.bool) {
+			if ((p.dataType == Policies.bool) && (!p.isFixed)) {
 				count++;
 			}
 		}
 		this.booleanIndexes = new int[count];
 		for (count = 0; count < Policies.allPolicies.length; count++) {
-			if (Policies.allPolicies[count].dataType == Policies.bool) {
+			if ((Policies.allPolicies[count].dataType == Policies.bool) && (!Policies.allPolicies[count].isFixed)) {
 				this.booleanIndexes[index] = count;
 				index++;
 			}
@@ -409,13 +446,13 @@ public class Population {
 		count = 0;
 		index = 0;
 		for (Policy p : Policies.allPolicies) {
-			if (p.dataType == Policies.natural) {
+			if ((p.dataType == Policies.natural) && (!p.isFixed)) {
 				count++;
 			}
 		}
 		this.naturalIndexes = new int[count];
 		for (count = 0; count < Policies.allPolicies.length; count++) {
-			if (Policies.allPolicies[count].dataType == Policies.natural) {
+			if ((Policies.allPolicies[count].dataType == Policies.natural) && (!Policies.allPolicies[count].isFixed)) {
 				this.naturalIndexes[index] = count;
 				index++;
 			}
@@ -423,13 +460,13 @@ public class Population {
 		count = 0;
 		index = 0;
 		for (Policy p : Policies.allPolicies) {
-			if (p.dataType == Policies.real) {
+			if ((p.dataType == Policies.real) && (!p.isFixed)) {
 				count++;
 			}
 		}
 		this.realIndexes = new int[count];
 		for (count = 0; count < Policies.allPolicies.length; count++) {
-			if (Policies.allPolicies[count].dataType == Policies.real) {
+			if ((Policies.allPolicies[count].dataType == Policies.real) && (!Policies.allPolicies[count].isFixed)) {
 				this.realIndexes[index] = count;
 				index++;
 			}

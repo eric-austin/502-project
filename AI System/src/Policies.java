@@ -7,7 +7,7 @@ public class Policies {
 	static protected int bool = 0;
 	static protected int natural = 1;
 	static protected int real = 2;
-	static protected int[] categoryIndexes = {23, 59, 83, 101, 107, 123, 179};
+	static protected int[] categoryIndexes = {23, 59, 83, 101, 107, 123};
 	
 	
 	//transportation sector policies (24)

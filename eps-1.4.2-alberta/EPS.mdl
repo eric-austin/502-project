@@ -26685,7 +26685,6 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 1,138,137,89,0,0,0,0,0,128,0,-1--1--1,,1|(2504,822)|
 ///---\\\
 :L<%^E!@
-1:CurrentRun.vdfx
 1:MostRecentRun.vdfx
 8:GraphDefinitions.vgd
 9:CurrentRun
@@ -26713,11 +26712,14 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 22:Year,Years,yr,yrs
 23:0
 15:0,0,0,0,0,0
-19:110,1
+19:90,21
 27:0,
 34:0,
+42:1
+72:0
+73:0
 4:Time
-5:Output Total CO2e Emissions
+5:First Year NPV of Capital Fuel and OM Expenditures through This Year
 35:Date
 36:YYYY-MM-DD
 37:2000
@@ -26725,9 +26727,6 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 39:1
 40:0
 41:0
-42:1
-72:0
-73:0
 76:0
 77:0
 78:0
