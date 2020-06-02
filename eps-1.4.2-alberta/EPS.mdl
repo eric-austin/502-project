@@ -26685,9 +26685,11 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 1,138,137,89,0,0,0,0,0,128,0,-1--1--1,,1|(2504,822)|
 ///---\\\
 :L<%^E!@
+1:CurrentRunOdd.vdfx
+1:CurrentRun.vdfx
 1:MostRecentRun.vdfx
 8:GraphDefinitions.vgd
-9:CurrentRun
+9:CurrentRunOdd
 22:$,Dollar,Dollars,$s
 22:acre,acres
 22:btu,btus
