@@ -26689,7 +26689,7 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 1:CurrentRun.vdfx
 1:MostRecentRun.vdfx
 8:GraphDefinitions.vgd
-9:CurrentRunOdd
+9:CurrentRun
 22:$,Dollar,Dollars,$s
 22:acre,acres
 22:btu,btus
@@ -26721,7 +26721,7 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 72:0
 73:0
 4:Time
-5:First Year NPV of Capital Fuel and OM Expenditures through This Year
+5:Achieved Capacity Factors[Electricity Source,Power Plant Quality]
 35:Date
 36:YYYY-MM-DD
 37:2000

@@ -147,7 +147,7 @@ public class CandidateSolution {
 		//fitness has two components: environment and economic (with user set weights)
 		//environment is business as usual emissions less candidate emissions as a fraction of BAU emissions (9924.202)
 		//economic is ambition NPV of extra expenditures less candidate NPV expenditures as a fraction of ambition expenditures(65,000,000,000)
-		this.fitness = Main.envWeight*((9924.202 - em)/9924.202) + Main.econWeight*((500.0 - (exp/1000000000.0))/1000.0);
+		this.fitness = (1E12 - exp)/2E12;
 		this.emissions = em;
 		this.expenditures = exp;
 	}

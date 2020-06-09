@@ -1,0 +1,50 @@
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+Executing SPECIAL>LOADMODEL|EPS.mdl.
+Executing SIMULATE>RUNNAME|CurrentRun.
+Executing SIMULATE>SETVAL|Percentage Reduction of Separately Regulated Pollutants[LDVs]=0.0.
+Loading CurrentRun.vdfx as CurrentRun.vdfx.  Origin is ...
+(Mon Jun  8 14:33:42 2020) From EPS.mdl.
+             sim  CurrentRun -I.
+Executing MENU>VDF2CSV|CurrentRun.vdf|RunResults.csv|OutputVarsToExport.lst.
+Executing MENU>EXIT.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+Executing SPECIAL>LOADMODEL|EPS.mdl.
+Executing SIMULATE>RUNNAME|CurrentRun.
+Executing SIMULATE>SETVAL|Percentage Reduction of Separately Regulated Pollutants[LDVs]=0.0.
+Loading CurrentRun.vdfx as CurrentRun.vdfx.  Origin is ...
+(Mon Jun  8 14:33:55 2020) From EPS.mdl.
+             sim  CurrentRun -I.
+Executing MENU>VDF2CSV|CurrentRun.vdf|RunResults.csv|OutputVarsToExport.lst.
+Executing MENU>EXIT.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+Executing SPECIAL>LOADMODEL|EPS.mdl.
+Executing SIMULATE>RUNNAME|CurrentRun.
+Executing SIMULATE>SETVAL|Percentage Reduction of Separately Regulated Pollutants[LDVs]=0.0.
+Loading CurrentRun.vdfx as CurrentRun.vdfx.  Origin is ...
+(Mon Jun  8 14:33:59 2020) From EPS.mdl.
+             sim  CurrentRun -I.
+Executing MENU>VDF2CSV|CurrentRun.vdf|RunResults.csv|OutputVarsToExport.lst.
+Executing MENU>EXIT.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+Executing SPECIAL>LOADMODEL|EPS.mdl.
+Executing SIMULATE>RUNNAME|CurrentRun.
+Executing SIMULATE>SETVAL|Percentage Reduction of Separately Regulated Pollutants[LDVs]=0.0.
+Loading CurrentRun.vdfx as CurrentRun.vdfx.  Origin is ...
+(Mon Jun  8 14:34:16 2020) From EPS.mdl.
+             sim  CurrentRun -I.
+Executing MENU>VDF2CSV|CurrentRun.vdf|RunResults.csv|OutputVarsToExport.lst.
+Executing MENU>EXIT.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
+Executing SPECIAL>LOADMODEL|EPS.mdl.
+Executing SIMULATE>RUNNAME|CurrentRun.
+Executing SIMULATE>SETVAL|Percentage Reduction of Separately Regulated Pollutants[LDVs]=0.0.
+Loading CurrentRun.vdfx as CurrentRun.vdfx.  Origin is ...
+(Mon Jun  8 14:34:54 2020) From EPS.mdl.
+             sim  CurrentRun -I.
+Executing MENU>VDF2CSV|CurrentRun.vdf|RunResults.csv|OutputVarsToExport.lst.
+Executing MENU>EXIT.
+STOP:        Unable to open C:\Users\eric.austin1\vensimdp.ini to read/record initilization information.
